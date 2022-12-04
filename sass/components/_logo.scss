@@ -5,6 +5,10 @@
     line-height: 1.2;
     color: #000000;
     text-decoration: none;
+    @media screen and (max-width: 1200px) {
+            font-size: 24px;
+            line-height: 1.16;
+        }
 }
 
 .logo span {
@@ -17,4 +21,10 @@
     font-size: 26px;
     line-height: 1.19;
     color: var(--primery-white-color);
-}
+
+    @media screen and (max-width: 768px) {
+    justify-content: center;
+        display: flex;
+        margin-bottom: 20px;
+        }
+        }

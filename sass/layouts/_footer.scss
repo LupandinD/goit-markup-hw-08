@@ -2,7 +2,26 @@
     font-style: normal;
     line-height: 1.71;
     color: var(--primery-white-color);
-}
+        // @media screen and (max-width: 768px) {
+        //     display: flex;
+        //         flex-direction: column;
+        //         align-items: center;
+        //     }
+        }
+        .footer-wrap-tablet{
+            @media screen and (min-width: 1200px) {
+                    display: flex;
+                    gap: 70px;
+                }
+            @media screen and (min-width: 768px) and (max-width: 1200px) {
+                display: flex;
+                    flex-direction: row;
+                    margin-bottom: 60px;
+                    gap: 165px;
+            }
+
+        }
+
 
 .footer-link {
     font-style: normal;
@@ -23,6 +42,14 @@
     margin-bottom: 9px;
 }
 
+.footer-list{
+    @media screen and (max-width: 768px) {
+    display: flex;
+        flex-direction: column;
+        align-items: center;  
+        margin-bottom: 60px;              }
+}
+
 .footer {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -33,6 +60,25 @@
     display: flex;
     align-items: baseline;
     justify-content: space-between;
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+@media screen and (max-width: 768px) {
+    flex-direction: column;
+        align-items: center;
+    }
+
+
+    
+}
+
+.footer-soc{
+    @media screen and (max-width: 768px) {
+            margin-bottom: 60px;
+        }
+
 }
 
 .footer-soc-title {
@@ -43,6 +89,12 @@
     color: var(--primery-white-color);
 
     margin-bottom: 20px;
+
+    @media screen and (max-width: 768px) {
+        display: flex;
+            justify-content: center;
+        }
+    
 }
 
 .footer-social-list {
@@ -72,6 +124,16 @@
             }
 }
 
+.footer-form-wrap{
+    @media screen and (max-width: 1200px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+    
+
+}
 
 .footer-form-titel {
     font-size: 14px;
@@ -87,6 +149,12 @@
 .footer-subscription {
     display: flex;
     gap: 12px;
+
+@media screen and (max-width: 1200px){
+    flex-direction: column;
+        align-items: center;
+}
+        
 }
 
 .footer-form-mail {

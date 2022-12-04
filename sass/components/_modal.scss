@@ -12,6 +12,7 @@
 
 .modal {
     width: 528px;
+    
     min-height: 581px;
     background-color: rgba(255, 255, 255, 1);
     border-radius: 4px;
@@ -25,6 +26,10 @@
     left: 50%;
     transform: translate(-50%, -50%) scaleY(1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @media screen and (max-width: 768px) {
+        width: calc(100% - 30px);
+        
+    }
 }
 
 .modal-titel {
@@ -203,7 +208,13 @@
     fill: var(--hover-logo-color);
 }
 
-.backdrop.is-hidden {
+// .backdrop.is-hidden {
+//     opacity: 0;
+//     visibility: hidden;
+//     pointer-events: none;
+// }
+
+.is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;

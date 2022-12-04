@@ -1,9 +1,16 @@
 .hero__container {
-    max-width: 1600px;
+    // max-width: 1600px;
+    min-width: 100%;
     margin-left: auto;
     margin-right: auto;
+    background-image: url('../images/Img-overlay.svg'), url('../images/hero-bg-mobile.jpg');
 
-    background-image: url('../images/Img-overlay.svg'), url('../images/hero-bg.jpg');
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url('../images/Img-overlay.svg'), url('../images/hero-bg-mobile2x.jpg');
+        }
+    
     background-color: #c4c4c4;
     background-size: cover;
     background-repeat: no-repeat;
@@ -11,20 +18,46 @@
 
     padding-top: 200px;
     padding-bottom: 200px;
+
+    @media screen and (min-width: 768px){
+        background-image: url('../images/Img-overlay.svg'), url('../images/hero-bg-tablet.jpg');
+        @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url('../images/Img-overlay.svg'), url('../images/hero-bg-tablet2x.jpg');
+            }
+    }
+    
+    @media screen and (min-width: 1200px) {
+        background-image: url('../images/Img-overlay.svg'), url('../images/hero-bg.jpg');
+        @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url('../images/Img-overlay.svg'), url('../images/hero-bg2x.jpg');
+            }
+    }
 }
 
 .hero__titel {
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    // font-size: 44px;
+    // line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.6;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--primery-white-color);
 
-    width: 696px;
+    // width: 696px;
     text-align: center;
     margin: 0 auto;
     margin-bottom: 30px;
+
+    @media screen and (min-width: 1200px) {
+            
+           & {font-size: 44px;
+            line-height: 1.36;}
+        }
 }
 
 .hero__button {
