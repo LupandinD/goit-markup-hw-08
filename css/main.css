@@ -143,6 +143,12 @@ body {
   text-align: center;
   margin-bottom: 50px;
 }
+@media screen and (max-width: 1200px) {
+  .section-title {
+    font-size: 28px;
+    line-height: 1.17;
+  }
+}
 
 .backdrop {
   width: 100%;
@@ -533,10 +539,11 @@ body {
 
 .mob-menu {
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   position: fixed;
   top: 0;
+  left: 0;
   background-color: var(--primery-white-color);
   z-index: 1;
 }
@@ -555,6 +562,9 @@ body {
 }
 .mob-menu .menu-close:focus {
   fill: #2196F3;
+}
+.mob-menu .current-mob {
+  color: var(--hover-logo-color) !important;
 }
 .mob-menu .menu-mob__item {
   font-family: "Roboto";
@@ -607,10 +617,14 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 20px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.mob-menu .social-mob__item:not(:last-child) {
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 .mob-menu .social-mob-link {
   font-family: "Roboto";
@@ -624,7 +638,7 @@ body {
 }
 
 .hero__container {
-  min-width: 100%;
+  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   background-image: url("../images/Img-overlay.svg"), url("../images/hero-bg-mobile.jpg");
@@ -638,6 +652,12 @@ body {
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero__container {
     background-image: url("../images/Img-overlay.svg"), url("../images/hero-bg-mobile2x.jpg");
+  }
+}
+@media screen and (max-width: 767px) {
+  .hero__container {
+    height: 400px;
+    padding: 118px 0;
   }
 }
 @media screen and (min-width: 768px) {
@@ -780,6 +800,11 @@ body {
   line-height: 1.14;
   text-transform: uppercase;
   margin-bottom: 10px;
+}
+@media screen and (max-width: 767px) {
+  .benefits__titel {
+    text-align: center;
+  }
 }
 
 .benefits__text {
@@ -965,6 +990,9 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-bottom: 60px;
     gap: 165px;
   }
@@ -1010,9 +1038,6 @@ body {
 }
 
 .footer-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
@@ -1045,7 +1070,31 @@ body {
             align-items: center;
   }
 }
+@media screen and (min-width: 1200px) {
+  .footer-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-soc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 @media screen and (max-width: 768px) {
   .footer-soc {
     margin-bottom: 60px;
@@ -1106,9 +1155,6 @@ body {
 
 @media screen and (max-width: 1200px) {
   .footer-form-wrap {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1116,6 +1162,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    text-align: center;
   }
 }
 
@@ -1129,9 +1176,6 @@ body {
 }
 
 .footer-subscription {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   gap: 12px;
 }
 @media screen and (max-width: 1200px) {
@@ -1156,6 +1200,12 @@ body {
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+}
+@media screen and (max-width: 1199px) {
+  .footer-form-mail {
+    width: 100%;
+    max-width: 450px;
+  }
 }
 
 .btn-footer {
@@ -1182,6 +1232,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
+  margin: 0 auto;
+  margin-top: 20px;
 }
 
 .portfolio-button {
