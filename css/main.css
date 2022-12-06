@@ -608,7 +608,7 @@ body {
   font-size: 34px;
   line-height: 40px;
   letter-spacing: 0.02em;
-  color: #2196F3;
+  color: var(--hover-logo-color);
 }
 @media screen and (max-width: 470px) {
   .mob-menu .contacts-mob__tel {
