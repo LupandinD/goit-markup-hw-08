@@ -279,6 +279,12 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media screen and (max-width: 1199px) {
+  .check-text {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+}
 
 .check-text span {
   width: 15px;
@@ -556,8 +562,8 @@ body {
   background-color: inherit;
   border: none;
   position: absolute;
-  top: 10px;
-  right: 15px;
+  top: 29px;
+  right: 20px;
   display: block;
 }
 .mob-menu .menu-close:focus {
@@ -604,6 +610,11 @@ body {
   letter-spacing: 0.02em;
   color: #2196F3;
 }
+@media screen and (max-width: 470px) {
+  .mob-menu .contacts-mob__tel {
+    font-size: 27px;
+  }
+}
 .mob-menu .contacts-mob__meil {
   font-family: "Roboto";
   font-style: normal;
@@ -617,9 +628,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 .mob-menu .social-mob__item:not(:last-child) {
   margin-right: 10px;
@@ -635,6 +643,11 @@ body {
   /* identical to box height, or 122% */
   letter-spacing: 0.02em;
   color: #2196F3;
+}
+@media screen and (max-width: 470px) {
+  .mob-menu .social-mob-link {
+    font-size: 12px;
+  }
 }
 
 .hero__container {
@@ -990,9 +1003,8 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     margin-bottom: 60px;
     gap: 165px;
   }
@@ -1027,7 +1039,6 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-bottom: 60px;
   }
 }
 
@@ -1095,11 +1106,6 @@ body {
             align-items: center;
   }
 }
-@media screen and (max-width: 768px) {
-  .footer-soc {
-    margin-bottom: 60px;
-  }
-}
 
 .footer-soc-title {
   font-size: 14px;
@@ -1153,6 +1159,12 @@ body {
   fill: var(--primery-white-color);
 }
 
+@media screen and (max-width: 768px) {
+  .footer-wrap-tablet {
+    margin-bottom: 60px;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .footer-form-wrap {
     -webkit-box-orient: vertical;
@@ -1187,6 +1199,13 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-subscription {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -1233,7 +1252,11 @@ body {
           align-items: center;
   gap: 10px;
   margin: 0 auto;
-  margin-top: 20px;
+}
+@media screen and (max-width: 1199px) {
+  .btn-footer {
+    margin-top: 20px;
+  }
 }
 
 .portfolio-button {
